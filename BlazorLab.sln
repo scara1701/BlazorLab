@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31729.503
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorLab.Wasm", "BlazorLab.Wasm\BlazorLab.Wasm.csproj", "{98A23FCB-9DE5-4A3D-9B6A-1F8C1AB92D34}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorLab.MyLib", "BlazorLab.MyLib\BlazorLab.MyLib.csproj", "{174B0C7F-C7E3-47B0-80C5-9A2DA812ED4C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{98A23FCB-9DE5-4A3D-9B6A-1F8C1AB92D34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98A23FCB-9DE5-4A3D-9B6A-1F8C1AB92D34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98A23FCB-9DE5-4A3D-9B6A-1F8C1AB92D34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98A23FCB-9DE5-4A3D-9B6A-1F8C1AB92D34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{174B0C7F-C7E3-47B0-80C5-9A2DA812ED4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{174B0C7F-C7E3-47B0-80C5-9A2DA812ED4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{174B0C7F-C7E3-47B0-80C5-9A2DA812ED4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{174B0C7F-C7E3-47B0-80C5-9A2DA812ED4C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2857CFA8-9FE7-4D0C-843D-5151E23567C6}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,19 @@
+﻿@using BlazorLab.MyLib.ViewModels
+@inject IMainViewModel mainViewModel
+
+<h3>MainView</h3>
+@if (mainViewModel.CurrentNumber == 0)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <p><em>Er zijn @mainViewModel.CurrentNumber items gegenereerd.</em></p>
+    <button @onclick="mainViewModel.GoToDetailsCommand.Execute">Ga naar details</button>
+    <button>Toon messagebox</button>
+    <button>Selecteer een object</button>
+}
+
+@code {
+
+}

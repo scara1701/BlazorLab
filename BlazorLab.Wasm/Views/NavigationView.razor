@@ -1,0 +1,24 @@
+﻿@page "/navigationView"
+@using BlazorLab.MyLib.ViewModels
+@inject INavigationViewModel navigationViewModel
+
+
+<h3>NavigationView</h3>
+
+@switch (navigationViewModel.SelectedView)
+{
+    case MainViewModel:
+        <p>Je hebt mainviewmodel gekozen.</p>
+        <MainView />
+        break;
+    case DetailsViewModel:
+        <p>Je hebt detailsviewmodel gekozen.</p>
+        <DetailsView />
+        break;
+    default:
+        break;
+}
+
+@code {
+
+}
