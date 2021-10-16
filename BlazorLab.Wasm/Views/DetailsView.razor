@@ -1,5 +1,29 @@
-﻿<h3>DetailsView</h3>
-
+﻿@using BlazorLab.MyLib.ViewModels
+@inject IDetailsViewModel detailsViewModel
+<h3>DetailsView</h3>
+@if (detailsViewModel.TheList.Count == 0)
+{
+    <p><em>Loading...</em></p>
+}
+else {
+<table class="table">
+    <thead>
+        <tr>
+            <th>ObjectID</th>
+            <th>Guid</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in detailsViewModel.TheList)
+        {
+            <tr>
+                <td>@item.ObjectID</td>
+                <td>@item.RandomGuid</td>
+            </tr>
+        }
+    </tbody>
+</table>
+}
 @code {
 
 }
