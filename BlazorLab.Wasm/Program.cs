@@ -24,10 +24,10 @@ namespace BlazorLab.Wasm
             builder.RootComponents.Add<App>("#app");
 
             builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
-            builder.Services.AddSingleton<IGetNumberService>(x => getNumberService);
-            builder.Services.AddSingleton<IDialogService, DialogService>();
-            builder.Services.AddSingleton<INavigationService, NavigationService>();
-            builder.Services.AddSingleton<INavigationViewModel,NavigationViewModel>();
+            builder.Services.AddScoped<IGetNumberService>(x => getNumberService);
+            builder.Services.AddScoped<IDialogService, DialogService>();
+            builder.Services.AddScoped<INavigationService, NavigationService>();
+            builder.Services.AddScoped<INavigationViewModel,NavigationViewModel>();
             builder.Services.AddTransient<IMainViewModel, MainViewModel>();
             builder.Services.AddTransient<IDetailsViewModel, DetailsViewModel>();
 

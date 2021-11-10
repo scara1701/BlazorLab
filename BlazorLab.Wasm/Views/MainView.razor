@@ -1,4 +1,6 @@
 ﻿@using BlazorLab.MyLib.ViewModels
+@using System.Threading;
+
 @inject IMainViewModel mainViewModel
 
 <h3>MainView</h3>
@@ -9,11 +11,18 @@
 else
 {
     <p><em>Er zijn @mainViewModel.CurrentNumber items gegenereerd.</em></p>
-    <button @onclick="mainViewModel.GoToDetailsCommand.Execute">Ga naar details</button>
+    <button @onclick="LaadDetails">Ga naar details</button>
     <button>Toon messagebox</button>
     <button>Selecteer een object</button>
 }
 
 @code {
+    void LaadDetails()
+    {
+        mainViewModel.GoToDetailsCommand.Execute(null);
+        ViewChanged.InvokeAsync();
+    }
 
+    [Parameter]
+    public EventCallback<string> ViewChanged{get;set;}
 }

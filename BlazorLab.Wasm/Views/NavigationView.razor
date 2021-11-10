@@ -9,7 +9,7 @@
 {
     case MainViewModel:
         <p>Je hebt mainviewmodel gekozen.</p>
-        <MainView />
+        <MainView ViewChanged="Updated"/>
         break;
     case DetailsViewModel:
         <p>Je hebt detailsviewmodel gekozen.</p>
@@ -20,5 +20,8 @@
 }
 
 @code {
-
+    void Updated()
+    {
+        StateHasChanged();
+    }
 }
